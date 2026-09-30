@@ -12,10 +12,8 @@ source:
   sha256: 2a03cb692fb4f5ff4efbd716dc711dc8350bfcd105685d8fd5ef02ed812a2532
 
 build:
-  number: 0
-  skip:
-    - win
-    - osx
+  noarch: python
+  number: 1
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -26,7 +24,7 @@ requirements:
     - pip
     - wheel
   run:
-    - python
+    - python >=${{ python_min }}
     - numpy
     - argcomplete
     - nxstools >=3.56.1
