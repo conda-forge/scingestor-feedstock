@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.0.1"
+  version: "1.1.0"
 
 package:
   name: scingestor
@@ -9,11 +9,11 @@ package:
 
 source:
   url: https://github.com/jkotan/scingestor/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 2a03cb692fb4f5ff4efbd716dc711dc8350bfcd105685d8fd5ef02ed812a2532
+  sha256: 9a16e8d2045c0fd7091599dc7ee585b793c07ff77aeaf28ad5db19f78446ddec
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
